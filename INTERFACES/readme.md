@@ -20,28 +20,25 @@ You are building a vehicle management system for a fleet company. The company ma
 
 ---
 
-### 2. **Shape Drawing Application**
 
-**Scenario:**
-You are developing a drawing application that can create different shapes such as rectangles, circles, and triangles. Each shape can be drawn and resized. The application should allow for calculating the area and perimeter of each shape.
+### Problem 2: **Music Player Example - Abstract Class and Interface**
 
-**Requirements:**
+Design a **MusicPlayer** application using abstract classes and interfaces. The system has different types of music players: **MP3Player** and **RadioPlayer**.
 
-* Create an **interface** `Shape` with methods `draw()`, `resize()`, `getArea()`, and `getPerimeter()`.
-* Create an **abstract class** `AbstractShape` that implements the `Shape` interface and provides common methods like `resize()`.
-* Implement concrete classes for each shape:
+* Create an interface `Playable` with methods:
 
-  * `Circle` (radius-based area and perimeter)
-  * `Rectangle` (length and width-based area and perimeter)
-  * `Triangle` (side-based area and perimeter)
+  * `void play()`: Starts playing the music.
+  * `void pause()`: Pauses the music.
+  * `void stop()`: Stops the music.
+* Create an abstract class `AbstractPlayer` which implements `Playable` and defines some common properties such as `volume`, `isPlaying`, and `trackName`.
 
-**Deliverables:**
+  * Add a method `void displayInfo()` to show the player's information (e.g., track name, volume, etc.).
+* Create two concrete classes: `MP3Player` and `RadioPlayer`:
 
-* Define the `Shape` interface and the `AbstractShape` abstract class.
-* Implement the concrete classes `Circle`, `Rectangle`, and `Triangle`.
-* Write code to demonstrate the creation of each shape, resizing them, and calculating their area and perimeter.
+  * The `MP3Player` class should implement `play()`, `pause()`, and `stop()`. It should also have an additional method to load a track by name.
+  * The `RadioPlayer` class should implement `play()`, `pause()`, and `stop()`, but its `play()` method should play a radio station instead of a song.
 
----
+
 
 ### 3. **Employee Management System**
 
@@ -60,4 +57,5 @@ You are building a system to manage employees in a company. The system should be
 * Define the `Employee` interface and the abstract classes `FullTimeEmployee` and `PartTimeEmployee`.
 * Implement the concrete classes `Manager` and `Intern`.
 * Write code to calculate and print salaries for both full-time and part-time employees.
+
 
